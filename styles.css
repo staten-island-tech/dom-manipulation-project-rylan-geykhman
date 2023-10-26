@@ -1,0 +1,14 @@
+.card {
+    height: 50vh;
+    width: 24%;
+    margin: 2.5rem 0;
+    display: flex;
+    background-color: rgb(220, 219, 153);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease-in-out;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 1);
+}
+
+.container {}
