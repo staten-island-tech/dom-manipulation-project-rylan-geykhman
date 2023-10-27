@@ -4,7 +4,9 @@ const DOMSelectors = {
     picture: document.getElementById("picture"),
     email: document.getElementById("email"),
     button: document.getElementById("button"),
-    container: document.getElementById("container")
+    container: document.getElementById("container"),
+    card: document.getElementById("card"),
+    deletebutton:document.querySelector(".delete-button")
 };
 
 DOMSelectors.form.addEventListener("submit", function (event) {
@@ -27,14 +29,21 @@ function insert(thing, DOMSelectors) {
         <h2 class="card-title">${thing.names}</h2>
             <img src="${thing.pictures}" alt="picture" class="card-img">
         <h3 class="card-emails">${thing.emails}</h3>
+        <button type="button" class="delete-button" id="delete">Delete</button>
     </div>`);
     clear(DOMSelectors);
+    remove();
 };
 
 function clear(DOMSelectors){
-    DOMSelectors.name.value = DOMSelectors.picture.value = DOMSelectors.email.value = '';
+    DOMSelectors.firstName.value = DOMSelectors.picture.value = DOMSelectors.email.value = '';
 };
 
-//function pushDOM(DOMSelectors){}
-
-//function removeObject(DOMSelectors){}
+function remove(){
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach((btn)=> 
+        btn.addEventListener("click", function (event) {
+            event.target.parentElement.remove();
+        })
+    )
+};
