@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOMSelectors</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <script src="dom.js" defer></script>
     <form action="" class="form">
-
+        <label id="text">Name:</label>
         <input type="text" id="firstName">
         <!-- type=text is an input version where it asks you to input text-->
+        <label id="text">Picture:</label>
+        <input type="file" id="picture">
+
+        <label id="text">Email:</label>
+        <input type="text" id="email">
+
         <input type="submit" id="button">
     </form>
 
+    <div id="container">
+
+    </div>
+    <script src="dom.js" defer></script>
 </body>
 
 </html>
